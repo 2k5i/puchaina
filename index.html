@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorando div</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <h1>Explonado los elementos Div</h1>
+    <div id="cuadrado"></div>
+    <br><br>
+    <label for="cantidad">Ingrese la cantidad de div que deseas crear: </label>
+    <input type="number" name="cantidad" id="cantidad">
+    <button onclick="procesar()">Procesar</button>
+    <!--Crearemos un div con id contenedor para organizar a los div que se crearán al
+    dar clic al botón procesar (en tiempo de ejecución-->
+    <div id="contenedor">
+ 
+    </div>
+<script>
+function procesar(){
+    let cantidad=parseInt(document.getElementById("cantidad").value);
+    let contenedor = document.getElementById("contenedor");
+    for (let i=1; i=cantidad; i++){
+        let nuevoDiv=document.createElement("div");
+        contenedor.appendChild(nuevoDiv);
+    }
+}
+ 
+</script>
+ 
+</body>
+</html>
